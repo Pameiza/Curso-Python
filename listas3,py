@@ -1,0 +1,17 @@
+numeros = [1, 2, 3, 4, 5]
+suma = sum(numeros)
+print(suma)
+
+maximo = max(numeros)
+print(max)
+
+minimo = min(numeros)
+print(min)
+
+numeros = [numero * 2 for numero in numeros]
+print(numeros)
+ 
+for numero in  numeros:
+    if numero %2 ==0:
+        print(numero)
+

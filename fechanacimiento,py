@@ -1,0 +1,15 @@
+import datetime
+def calcular_edad(fecha_nacimiento):
+    """Calcula la edad a partir de una fecha de nacimiento
+    Args:
+    fecha_nacimiento: una cadena de texto en formato 'dd/mm/yyyy'
+    returns:
+    Un entero representa la edad en años"""
+    fecha_nacimiento= datetime.datetime.strptime(fecha_nacimiento,"%d/%m/%Y")
+    hoy = datetime.date.today()
+
+    edad = hoy.year-fecha_nacimiento.year-((hoy.month,hoy.day)<(fecha_nacimiento.month,fecha_nacimiento.day))
+    return edad
+fecha_nacimiento = "04/06/1988"
+edad = calcular_edad(fecha_nacimiento)
+print(f"mi edad es:{edad}")
